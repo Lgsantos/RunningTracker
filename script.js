@@ -60,9 +60,11 @@ function handleSubmit(event) {
 
 function handleSubmit2(event) {
     event.preventDefault();
-    goal = Number(document.querySelector("#setGoal").value);
-    document.getElementById("target").innerText = goal.toFixed(1)
+    newGoal = Number(document.querySelector("#setGoal").value);
+    if (!newGoal) return;
+    document.getElementById("target").innerText = newGoal.toFixed(1)
     document.querySelector("div#progressCenter form").reset();
+    goal = newGoal;
     calcGoal();
 }
 
