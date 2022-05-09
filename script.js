@@ -58,4 +58,14 @@ function handleSubmit(event) {
     calcGoal();
 }
 
+function handleSubmit2(event) {
+    event.preventDefault();
+    goal = Number(document.querySelector("#setGoal").value);
+    document.getElementById("target").innerText = goal.toFixed(1)
+    document.querySelector("div#progressCenter form").reset();
+    calcGoal();
+}
+
 const form = document.querySelector("form").addEventListener("submit", handleSubmit);
+
+const form2 = document.querySelector("div#progressCenter form").addEventListener("submit", handleSubmit2);

@@ -61,7 +61,15 @@
         <h3>Meta semanal: <span id="progressTotal">0.0</span> / <span id="target"></span> quilômetros</h3>
         <div class="progressCircleWrapper">
             <div id="progressCircle">
-                <div id="progressCenter"></div>
+                <div id="progressCenter">
+                    <form id="setGoalWrapper">
+                        <label for="setGoal">Nova Meta:</label>
+                        <br>
+                        <input type="number" id="setGoal">
+                        <br>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
