@@ -50,6 +50,7 @@ function handleSubmit(event) {
     // console.log(entry);
     document.querySelector("form").reset();
     entries.push(entry);
+    if (entries.length == 8) entries.shift();
     // console.log(entries);
     addNewEntry(entry);
     calcTotal();
